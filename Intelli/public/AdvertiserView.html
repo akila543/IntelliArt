@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>IntelliArt</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="AdvertiserView.css">
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js'></script>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+        <a class="navbar-brand text-white" href="AdvertiserHome.html"><b>IntelliArt</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="AdvertiserHome.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-success" href="#">Advertiser View</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Trend</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Reports</a>
+              </li>
+
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <span class="nav-link text-white user">Welcome Advertiser</span>
+          <button type=button class="btn btn-outline-danger my-2 my-sm-0"  onclick="logout()">Logout</button>
+          </form>
+        </div>
+      </nav>
+  </header>
+<div class="bg-img3">
+  <h2 style="color:white;text-align:center;padding:15px;margin:0px;border-radius: 5px;">Advertiser View</h2>
+  <div style="position: 10px; height: 550px;overflow:scroll;">
+      <div style="height: 150px;">
+<div class="table-users">
+    <table cellspacing="0" class="table table-striped" style="margin-top: 0px;margin-bottom:0px">
+      <tr>
+        <th style="text-align:center"><b>S.No</b></th>
+        <th style="text-align:center"><b>Article Headline</b></th>
+        <th style="text-align:center"><b>Section</b></th>
+        <th style="text-align:center; width:21%"><b>Expected Time of Publication</b></th>
+        <th style="text-align:center"><b>Time left for publication</b></th>
+        <th style="text-align:center;"><b>Expected View count</b></th>
+        <th style="text-align:center;"><b>Article Type</b></th>
+        <th style="text-align:center"><b>Place Ad</b></th>
+      </tr>
+
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>001</td>
+        <td>R&D delays hurting: Cochlear</td>
+        <td>BUSINESS</td>
+        <td id="ftime0"></td>
+        <td id="timer0"></td>
+        <td>50000</td>
+        <td>BUSINESS REVIEW</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>002</td>
+        <td>Often a right royal waste of time</td>
+        <td>NATION</td>
+        <td id="ftime1"></td>
+        <td id="timer1"></td>
+        <td>20000</td>
+        <td>BUSINESS REVIEW</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </tr>
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>003</td>
+        <td>Gayle to retire after World Cup</td>
+        <td>SPORTS</td>
+        <td id="ftime2"></td>
+        <td id="timer2"></td>
+        <td style="padding-left:4%">85000<img style="width:20%;padding-left:3%;height:15%" src="fire1.jpg"></td>
+        <td>CRICKET</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>004</td>
+        <td>Telstra keen to wield 5G sword</td>
+        <td>TECHNOLOGY</td>
+        <td id="ftime3"></td>
+        <td id="timer3"></td>
+        <td style="padding-left:4%">70000<img style="width:20%;padding-left:3%;height:15%" src="fire1.jpg"></td>
+        <td>TECHNOLOGY</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>005</td>
+        <td>Workout pong tests patience</td>
+        <td>LIFE</td>
+        <td id="ftime4"></td>
+        <td id="timer4"></td>
+        <td>45000</td>
+        <td>HEALTH</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>006</td>
+        <td>Poetry for young ones</td>
+        <td>ARTS</td>
+        <td id="ftime5"></td>
+        <td id="timer5"></td>
+        <td>20000</td>
+        <td>BOOKS</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </tr>
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>007</td>
+      <td>MyWave float opens client service</td>
+      <td>TECHNOLOGY</td>
+      <td id="ftime6"></td>
+      <td id="timer6"></td>
+      <td>50000</td>
+      <td>TECHNOLOGY</td>
+      <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+      <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div >
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+            Yes
+          </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>008</td>
+        <td>Barty to shoulder the load</td>
+        <td>SPORTS</td>
+        <td id="ftime7"></td>
+        <td id="timer7"></td>
+        <td style="padding-left:4%">70000<img style="width:20%;padding-left:3%;height:15%" src="fire1.jpg"></td>
+        <td>TENNIS</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>009</td>
+        <td>Doyle accuser confronts council</td>
+        <td>NATION</td>
+        <td id="ftime8"></td>
+        <td id="timer8"></td>
+        <td style="padding-left:4%">80000<img style="width:20%;padding-left:3%;height:15%" src="fire1.jpg"></td>
+        <td>NATIONAL AFFAIRS</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>010</td>
+        <td>Foreign plunge fuels house slump</td>
+        <td>BUSINESS</td>
+        <td id="ftime9"></td>
+        <td id="timer9"></td>
+        <td style="padding-left:4%">70000<img style="width:20%;padding-left:3%;height:15%" src="fire1.jpg"></td>
+        <td>BUSINESS REVIEW</td>
+        <td><button style="font-size:13px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Place Ad?</button></td>
+        <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" style="text-align:center;">Are you sure you want to place the Ad?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="messagepop()">
+              Yes
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      </tr>
+   </table>
+ </div>
+</div>
+</div>
+
+</div>
+<script>
+  toastr.options = {
+  closeButton: true,
+  progressBar: true,
+  positionClass: 'toast-top-center',
+  preventDuplicates: false,
+  timeOut: 5000,
+}
+  function logout()
+  {
+  location.href = 'index.html';
+  }
+
+  function messagepop()
+  {
+    // alert("Your Ad will be placed along with the news");
+    toastr.success("Your Ad will be placed along with the news");
+  }
+
+  var x="ftime";
+  var y="timer";
+  for(var i=0;i<10;i++){
+  var x= "ftime"+i;
+  var y="timer"+i;
+
+  var st=new Date();
+  st.setDate( st.getDate() +1 );
+  var dt=new Date();
+  dt.setDate( dt.getDate() +4 );
+
+
+  function randomDate(start, end, startHour, endHour) {
+    var date = new Date(+start + Math.random() * (end - start));
+    var hour = startHour + Math.random() * (endHour - startHour) | 0;
+    date.setHours(hour);
+    return date;
+  }
+
+  var datetime=randomDate(st,dt,00,23);
+
+  var date=(datetime.toLocaleString('en-us', { month: 'long' })).toUpperCase()+" "+(datetime.getDate() < 10 ? "0" : "") + datetime.getDate()+ ", "+datetime.getFullYear();
+
+  var time=(datetime.getHours() < 10 ? "0" : "") + datetime.getHours() + ":" + (datetime.getMinutes() < 10 ? "0" : "") + datetime.getMinutes()+ " IST";
+
+
+  var futuredt=date+" "+time;
+
+  console.log("date-time ",futuredt);
+
+  document.getElementById(x).innerHTML=futuredt;
+
+  var futime= document.getElementById(x).innerText;
+  console.log(futime);
+  futime = futime.slice(0, -4);
+
+  var countDownDate = new Date(futime).getTime();
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  //var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById(y).innerHTML = days + "d : " + hours + "h : "
+  + minutes + "min ";
+
+  //+ seconds + "s "
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById(y).innerHTML = "EXPIRED";
+  }
+
+
+}
+</script>
+  </body>
+</html>

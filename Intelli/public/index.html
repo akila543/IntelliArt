@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>IntelliArt</title>
+    <link rel="stylesheet"type="text/css" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+  <body>
+    <div class="section1">
+    </div>
+    <div class="section2">
+    </div>
+    <div class="loginbox">
+      <div class="radio">
+      <img src="logo.png" class="logo">
+      <h1>IntelliArt</h1>
+      <form >
+        <p>Username</p>
+        <input type="text" name="uname" id="uname" placeholder="Enter Username">
+        <p>Password</p>
+        <input type="password" name="pwd" id="pwd" placeholder="Enter Password">
+        <ul class="customul">
+          <a href="#"> <label><input type="radio" class="customradio" name="optradio" id="r1" onchange="userfill('r1')">Editor</label></a>
+          <a href="#"> <label><input type="radio" class="customradio" name="optradio" id="r2" onchange="userfill('r2')">Advertiser</label></a>
+      </ul>
+        <input type="button" name="" value="Login"  onclick="login()">
+        <a href="#">Forgot password?</a><br>
+        <a href="#">Sign Up</a>
+      </form>
+        </div>
+    </div>
+    <script>
+function userfill(user)
+{
+  if(user=="r1"){
+document.getElementById("uname").value="editor@gmail.com";
+document.getElementById("pwd").value="12345";
+  }
+  else{
+document.getElementById("uname").value="advertiser@gmail.com";
+document.getElementById("pwd").value="12345";
+  }
+}
+
+function login()
+{
+
+  if(document.getElementById("r1").checked==true){
+  console.log("hello editor");
+  location.href = 'EditorHome.html';
+  }
+  if(document.getElementById("r2").checked==true){
+  console.log("hello advertiser");
+  location.href = 'AdvertiserHome.html';
+  }
+}
+    </script>
+  </body>
+</html>

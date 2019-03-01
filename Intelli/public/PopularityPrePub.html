@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>IntelliArt</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="PopularityPrePub.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+        <a class="navbar-brand text-white" href="EditorHome.html"><b>IntelliArt</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="EditorHome.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+           <li class="nav-item">
+              <a class="nav-link text-white" href="PopularityPred.html">Modelling</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-success" href="#">Prediction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Trend</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-white" href="#">Link2</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Reports</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <span class="nav-link text-white user">Welcome Editor</span>
+          <button type=button class="btn btn-outline-danger my-2 my-sm-0"  onclick="logout()">Logout</button>
+          </form>
+        </div>
+      </nav>
+  </header>
+<div class="bg-img3">
+  <h2 style="color:white;text-align:center;padding:15px;margin:0px;border-radius: 5px;">Article Popularity Pre Publication Prediction</h2>
+  <div style="position: 10px; height: 550px;overflow:scroll;">
+      <div style="height: 150px;">
+<div class="table-users">
+    <table cellspacing="0" class="table table-striped" style="margin-top:0px;margin-bottom:0px;">
+      <tr>
+        <th style="text-align:center"><b>S.No</b></th>
+        <th style="text-align:center"><b>Story ID</b></th>
+        <th style="text-align:center"><b>Article Headline</b></th>
+        <th style="text-align:center"><b>Section</b></th>
+        <th style="text-align:center"><b>No of Words</b></th>
+        <th style="text-align:center"><b>No of Images</b></th>
+        <th style="text-align:center"><b>Video?</b></th>
+        <th style="text-align:center"><b>Entities</b></th>
+        <th style="text-align:center"><b>Expected Day of Publication</b></th>
+        <th style="text-align:center"><b>Expected Views in 24 Hours</b></th>
+        <th style="text-align:center"><b>Expected Views in 1 week</b></th>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>001</td>
+        <td><a href="">BS001</a></td>
+        <td>BHP delivers dividend surprise</td>
+        <td>BUSINESS</td>
+        <td>500</td>
+        <td>1</td>
+        <td>No</td>
+        <td>BHP, China, United States</td>
+        <td id="ftime0">FEBRUARY 23, 2019 16:00 IST</td>
+        <td>20000</td>
+        <td>140000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+         <td>002</td>
+        <td><a href="">NA002</a></td>
+        <td>Hockey hits back at Helloworld ‘nonsense’</td>
+        <td>NATION</td>
+        <td>650</td>
+        <td>3</td>
+        <td>No</td>
+        <td>Senate, Thursday afternoon, Carstensen</td>
+        <td id="ftime1">FEBRUARY 22, 2019 10:00 IST</td>
+        <td>22000</td>
+        <td>154000</td>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>003</td>
+        <td><a href="">SP001</a></td>
+        <td>Wests Tigers free to sign Jennings</td>
+        <td>SPORTS</td>
+        <td>250</td>
+        <td>1</td>
+        <td>Yes</td>
+        <td>Robert Jennings, Wests Tigers, NRL</td>
+        <td id="ftime2">FEBRUARY 24, 2019 12:00 IST</td>
+        <td>30000</td>
+        <td>210000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>004</td>
+        <td><a href="">TECH001</a></td>
+        <td>iPhone to link with credit card</td>
+        <td>TECHNOLOGY</td>
+        <td>400</td>
+        <td>2</td>
+        <td>No</td>
+        <td>Apple, iPhones, WSJ</td>
+        <td id="ftime3">FEBRUARY 23, 2019 17:00 IST</td>
+        <td>20000</td>
+        <td>140000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+         <td>005</td>
+        <td><a href="">ART001</a></td>
+        <td>Doubt over actor’s racist attack</td>
+        <td>ARTS</td>
+        <td>260</td>
+        <td>2</td>
+        <td>Yes</td>
+        <td>Jussie Smollett, Chicago Police, MAGA</td>
+        <td id="ftime4">FEBRUARY 25, 2019 08:00 IST</td>
+        <td>80000</td>
+        <td>160000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>006</td>
+        <td><a href="">TECH002</a></td>
+        <td>UK slaps ‘gangster’ Facebook</td>
+        <td>TECHNOLOGY</td>
+        <td>300</td>
+        <td>1</td>
+        <td>No</td>
+        <td>Facebook, UK, Mark Zuckerberg</td>
+        <td id="ftime5">FEBRUARY 24, 2019 09:00 IST</td>
+        <td>20000</td>
+        <td>140000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>007</td>
+        <td><a href="">SP003</a></td>
+        <td>Spin rescues Aussies</td>
+        <td>SPORTS</td>
+        <td>500</td>
+        <td>3</td>
+        <td>Yes</td>
+        <td>Australian, Uppal, T20</td>
+        <td id="ftime6">FEBRUARY 25, 2019 17:00 IST</td>
+        <td>15000</td>
+        <td>105000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>008</td>
+        <td><a href="">SP002</a></td>
+        <td>Walker case to increase NRL pain</td>
+        <td>NATION</td>
+        <td>550</td>
+        <td>1</td>
+        <td>No</td>
+        <td>Dylan Walker, NRL, Saturday night</td>
+        <td id="ftime7">FEBRUARY 22, 2019 13:00 IST</td>
+        <td>35000</td>
+        <td>245000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+        <td>009</td>
+        <td><a href="">BS002</a></td>
+        <td>Trump seeks win as talks resume</td>
+        <td>BUSINESS</td>
+        <td>600</td>
+        <td>2</td>
+        <td>No</td>
+        <td>China, Trump, U.S.</td>
+        <td id="ftime8">FEBRUARY 23, 2019 16:00 IST</td>
+        <td>20000</td>
+        <td>140000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+         <td>010</td>
+        <td><a href="">NA002</a></td>
+        <td>Did China hack parliament?</td>
+        <td>NATION</td>
+        <td>400</td>
+        <td>1</td>
+        <td>Yes</td>
+        <td>China, Australia, Scott Morrison</td>
+        <td id="ftime9">FEBRUARY 23, 2019 14:00 IST</td>
+        <td>25000</td>
+        <td>175000</td>
+      </tr>
+   </table>
+ </div>
+</div>
+</div>
+</div>
+<script>
+  function logout()
+  {
+  location.href = 'index.html';
+  }
+
+  var x="ftime";
+  for(var i=0;i<10;i++){
+  var x= "ftime"+i;
+
+  var st=new Date();
+  st.setDate( st.getDate() +1 );
+  var dt=new Date();
+  dt.setDate( dt.getDate() +4 );
+
+
+  function randomDate(start, end, startHour, endHour) {
+    var date = new Date(+start + Math.random() * (end - start));
+    var hour = startHour + Math.random() * (endHour - startHour) | 0;
+    date.setHours(hour);
+    return date;
+  }
+
+  var datetime=randomDate(st,dt,00,23);
+
+  var date=(datetime.toLocaleString('en-us', { month: 'long' })).toUpperCase()+" "+datetime.getDate()+ ", "+datetime.getFullYear();
+
+  var time=(datetime.getHours() < 10 ? "0" : "") + datetime.getHours() + ":" + (datetime.getMinutes() < 10 ? "0" : "") + datetime.getMinutes()+ " IST";
+
+
+  var futuredt=date+" "+time;
+
+  console.log("date-time ",futuredt);
+
+  document.getElementById(x).innerHTML=futuredt;
+  }
+  </script>
+</body>
+
+</html>

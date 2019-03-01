@@ -1,0 +1,36 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+ .bg-blue
+ {
+     background: #191970;
+ }
+
+ .user{
+    margin-right: 20px;
+ }
+.hover1 tr:hover
+{
+  background-color: lightsteelblue !important;
+}
+.bg-img {
+  background-image: url("AdvertiserHome.jpg");
+  min-height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.bg-img1 {
+  background-image: url("EditorHome.jpg");
+  min-height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+body{
+  overflow: hidden;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>IntelliArt</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="PopularityPred.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+        <a class="navbar-brand text-white" href="EditorHome.html"><b>IntelliArt</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="EditorHome.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+             <li class="nav-item active">
+              <a class="nav-link text-success" href="#">Modelling</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="PopularityPrePub.html">Prediction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Trend</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-white" href="#">Link2</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Reports</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <span class="nav-link text-white user">Welcome Editor</span>
+          <button type=button class="btn btn-outline-danger my-2 my-sm-0"  onclick="logout()">Logout</button>
+          </form>
+        </div>
+      </nav>
+  </header>
+<div class="bg-img3">
+  <h2 style="color:white;text-align:center;padding:15px;margin:0px;border-radius: 5px;">Article Popularity Prediction</h2>
+  <div style="position: 10px; height: 550px;overflow:scroll;">
+      <div style="height: 150px;">
+<div class="table-users">
+    <table cellspacing="0" class="table table-striped" style="margin-top:0px;margin-bottom:0px;">
+      <tr>
+        <th style="text-align:center"><b>S.No</b></th>
+        <th style="text-align:center"><b>Story ID</b></th>
+        <th style="text-align:center"><b>Article Headline</b></th>
+        <th style="text-align:center"><b>Section</b></th>
+        <th style="text-align:center"><b>Published Time</b></th>
+        <th style="text-align:center"><b>Author(s)</b></th>
+        <th style="text-align:center"><b>Named Entities</b></th>
+        <th style="text-align:center"><b>First 30 minute views</b></th>
+        <th style="text-align:center"><b>30 minute tweets</b></th>
+        <th style="text-align:center"><b>24 Hour Predicted Views</b></th>
+        <th style="text-align:center"><b>1 Week Predicted views</b></th>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>001</td>
+      <td><a href="">BS001</a></td>
+      <td>Trump seeks win as talks resume</td>
+      <td>BUSINESS</td>
+      <td>JANUARY 25, 2019 22:30 IST</td>
+      <td>MICHAEL RODDAN</td>
+      <td>China,Trump,U.S.</td>
+      <td>250</td>
+      <td>130</td>
+      <td>20000</td>
+      <td>140000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>002</td>
+      <td><a href="">NA002</a></td>
+      <td>Support for Labor falls amid refugee row</td>
+      <td>NATIONAL AFFAIRS</td>
+      <td>FEBRUARY 19, 2019 15:00 IST</td>
+      <td>RICHARD FERGUSON</td>
+      <td>Prime Minister Scott Morrison, Bill Shorten</td>
+      <td>300</td>
+      <td>190</td>
+      <td>30000</td>
+      <td>210000</td>
+      </tr>
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>003</td>
+      <td><a href="">NA003</a></td>
+      <td>Minister lashes student climate strikes</td>
+      <td>NATION</td>
+      <td>JANUARY 10, 2019 16:00 IST</td>
+      <td>RACHEL BAXENDALE</td>
+      <td>Dan Tehan, Facebook, 4Climate website</td>
+      <td>450</td>
+      <td>150</td>
+      <td>45000</td>
+      <td>315000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>004</td>
+      <td><a href="">BS004</a></td>
+      <td>BHP delivers dividend surprise</td>
+      <td>BUSINESS</td>
+      <td>JANUARY 21, 2019 11:00 IST</td>
+      <td>MICHAEL RODDAN</td>
+      <td>BHP, China, United States</td>
+      <td>300</td>
+      <td>190</td>
+      <td>30000</td>
+      <td>210000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+     <td>005</td>
+      <td><a href="">SP005</a></td>
+      <td>Wests Tigers free to sign Jennings</td>
+      <td>SPORTS</td>
+      <td>FEBRUARY 09, 2019 12:00 IST</td>
+      <td>CAROLINE OVERINGTON</td>
+      <td>Robert Jennings, Wests Tigers, NRL</td>
+      <td>280</td>
+      <td>175</td>
+      <td>25000</td>
+      <td>175000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>006</td>
+      <td><a href="">TECH002</a></td>
+      <td>iPhone to link with credit card</td>
+      <td>TECHNOLOGY</td>
+      <td> FEBRUARY 16, 2019 01:30 IST</td>
+      <td>LUKE GRIFFITHS</td>
+      <td>Apple, iPhones, WSJ</td>
+      <td>300</td>
+      <td>120</td>
+      <td>55000</td>
+      <td>385000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>007</td>
+      <td><a href="">NA007</a></td>
+      <td>Man survives 17 days in outback</td>
+      <td>NATIONAL AFFAIRS</td>
+      <td>JANUARY 20, 2019 10:00 IST</td>
+      <td>AMOS AIKMAN</td>
+      <td>Australian, Harold Morton, Northern Territory</td>
+      <td>310</td>
+      <td>160</td>
+      <td>15000</td>
+      <td>105000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+     <td>008</td>
+      <td><a href="">SP008</a></td>
+      <td>Spin rescues Aussies</td>
+      <td>SPORTS</td>
+      <td>FEBRUARY 18, 2019 16:00 IST</td>
+      <td>PAUL GARVEY</td>
+      <td>Australian, Uppal, T20</td>
+      <td>450</td>
+      <td>300</td>
+      <td>65000</td>
+      <td>455000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>009</td>
+      <td><a href="">NA004</a></td>
+      <td>Walker case to increase NRL pain</td>
+      <td>NATIONAL AFFAIRS</td>
+      <td>FEBRUARY 19, 2019 16:00 IST</td>
+      <td>GREG BROWN</td>
+      <td>Dylan Walker, NRL, Saturday night</td>
+      <td>300</td>
+      <td>135</td>
+      <td>55000</td>
+      <td>385000</td>
+      </tr>
+
+      <tr style="font-size:15px;font-family: 'PT Sans', sans-serif;font-family: 'Roboto Slab', serif;text-align:center;">
+      <td>010</td>
+      <td><a href="">PO005</a></td>
+      <td>Corbyn’s Labour on the brink</td>
+      <td>Opinion</td>
+      <td>FEBRUARY 19, 2019 15:15 IST</td>
+      <td>RACHEL SYLVESTER</td>
+      <td>Ian Murray, Corbyn, House of Commons Labour</td>
+      <td>180</td>
+      <td>120</td>
+      <td>40000</td>
+      <td>280000</td>
+      </tr>
+   </table>
+ </div>
+</div>
+</div>
+</div>
+<script>
+function logout()
+{
+location.href = 'index.html';
+}
+</script>
+</body>
+
+</html>
